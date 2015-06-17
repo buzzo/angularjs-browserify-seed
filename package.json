@@ -1,0 +1,20 @@
+{
+  "name": "myapp",
+  "version": "0.0.0",
+  "scripts": {
+    "build": "browserify -t browserify-css -t brfs app/app.js -o public/bundle.js",
+    "serve-watch": "watchify -t browserify-css -t brfs app/app.js -o public/bundle.js",
+    "serve-launch": "cd public && w3",
+    "serve": "npm run serve-watch & npm run serve-launch"
+  },
+  "dependencies": {
+    "angular": "^1.4.0",
+    "angular-route": "^1.4.0",
+    "angular-css" : "1.0.7",
+    "watchify": "^3.2.2"
+  },
+  "devDependencies": {
+    "brfs": "latest",
+    "browserify-css" : "latest"
+  }
+}
