@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "test": "karma start karma.conf.js",
-    "test-single-run": "karma start karma.conf.js  --single-run",
+    "test-single-run": "karma start karma-coverage.conf.js --single-run",
     "build": "browserify -t browserify-css -t brfs app/app.js -o public/bundle.js",
     "serve-watch": "watchify -t browserify-css -t brfs app/app.js -o public/bundle.js",
     "serve-launch": "cd public && w3",
@@ -19,10 +19,12 @@
     "brfs": "latest",
     "browserify-css": "latest",
     "jasmine-core": "^2.3.4",
-    "karma": "~0.12",
+    "karma": "^0.12.36",
     "karma-jasmine": "^0.3.5",
     "karma-chrome-launcher": "^0.1.12",
     "karma-firefox-launcher": "^0.1.6",
-    "karma-browserify": "^4.2.1"
+    "karma-browserify": "^4.2.1",
+    "karma-coverage": "^0.4.2",
+    "browserify-istanbul": "^0.2.1"
   }
 }

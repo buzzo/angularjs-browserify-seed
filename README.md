@@ -15,9 +15,12 @@ TODO:
 - add fancy css
 - research + add security (login, etc)
  
-start using:
-- npm install
-- npm run serve (development - open browser http://localhost:3000 and change the code)
-- npm run build (build to public folder)
-- npm run test-single-run (run unit test once)
-- npm run test (run unit test and keeps watching for changes. Great for development)
+### Commands
+
+```
+npm install
+npm run serve (development - open browser http://localhost:3000 and change the code)
+npm run build (build to public folder)
+npm run test-single-run (run unit test once and show coverage report)
+npm run test (run unit test and keeps watching for changes. Great for development. No coverage report.)
+```
