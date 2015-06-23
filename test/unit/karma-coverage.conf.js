@@ -4,7 +4,7 @@ var cover = require('browserify-istanbul');
 module.exports = function (config) {
     config.set({
 
-        basePath: './',
+        basePath: '../../',
 
         files: [
             'app/modules/**/*.js',

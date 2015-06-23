@@ -2,8 +2,8 @@
   "name": "myapp",
   "version": "0.0.0",
   "scripts": {
-    "test": "karma start karma.conf.js",
-    "test-single-run": "karma start karma-coverage.conf.js --single-run",
+    "test": "karma start test/unit/karma.conf.js",
+    "test-single-run": "karma start test/unit/karma-coverage.conf.js --single-run",
     "build": "browserify -t browserify-css -t brfs app/app.js -o public/bundle.js",
     "serve-watch": "watchify -t browserify-css -t brfs app/app.js -o public/bundle.js",
     "serve-launch": "cd public && w3",
