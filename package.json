@@ -2,6 +2,7 @@
   "name": "myapp",
   "version": "0.0.0",
   "scripts": {
+    "test": "karma start karma.conf.js",
     "test-single-run": "karma start karma.conf.js  --single-run",
     "build": "browserify -t browserify-css -t brfs app/app.js -o public/bundle.js",
     "serve-watch": "watchify -t browserify-css -t brfs app/app.js -o public/bundle.js",
@@ -22,6 +23,6 @@
     "karma-jasmine": "^0.3.5",
     "karma-chrome-launcher": "^0.1.12",
     "karma-firefox-launcher": "^0.1.6",
-    "karma-browserify": "^4.2.1",
+    "karma-browserify": "^4.2.1"
   }
 }

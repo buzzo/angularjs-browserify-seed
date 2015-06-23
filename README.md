@@ -20,3 +20,4 @@ start using:
 - npm run serve (development - open browser http://localhost:3000 and change the code)
 - npm run build (build to public folder)
 - npm run test-single-run (run unit test once)
+- npm run test (run unit test and keeps watching for changes. Great for development)
