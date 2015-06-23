@@ -12,7 +12,11 @@ TODO:
 - add tests
 - add production build lifecycle
 - add CRUD example
+- add fancy css
+- research + add security (login, etc)
  
 start using:
 - npm install
 - npm run serve (development - open browser http://localhost:3000 and change the code)
+- npm run build (build to public folder)
+- npm run test-single-run (run unit test once)
