@@ -2,9 +2,11 @@
   "name": "myapp",
   "version": "0.0.0",
   "scripts": {
+    "build": "browserify -t browserify-css -t brfs app/app.js -o public/bundle.js",
     "test": "karma start test/unit/karma.conf.js",
     "test-single-run": "karma start test/unit/karma-coverage.conf.js --single-run",
-    "build": "browserify -t browserify-css -t brfs app/app.js -o public/bundle.js",
+    "preprotractor": "webdriver-manager update",
+    "protractor": "protractor test/e2e/protractor.conf.js",
     "serve-watch": "watchify -t browserify-css -t brfs app/app.js -o public/bundle.js",
     "serve-launch": "cd public && w3",
     "serve": "npm run serve-watch & npm run serve-launch"
@@ -25,6 +27,7 @@
     "karma-firefox-launcher": "^0.1.6",
     "karma-browserify": "^4.2.1",
     "karma-coverage": "^0.4.2",
-    "browserify-istanbul": "^0.2.1"
+    "browserify-istanbul": "^0.2.1",
+    "protractor": "^2.1.0"
   }
 }

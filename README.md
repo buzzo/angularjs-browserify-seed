@@ -9,7 +9,6 @@ Goals:
 - project should be easy to code = watchify + browserify
  
 TODO:
-- add tests
 - add production build lifecycle
 - add CRUD example
 - add fancy css
@@ -22,5 +21,6 @@ npm install
 npm run serve (development - open browser http://localhost:3000 and change the code)
 npm run build (build to public folder)
 npm run test-single-run (run unit test once and show coverage report)
-npm run test (run unit test and keeps watching for changes. Great for development. No coverage report.)
+npm run test (run unit test and keeps watching for changes. Great for development. No coverage report)
+npm run protractor (e2e tests. Your server must be up and running before you run this command)
 ```
