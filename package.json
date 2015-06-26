@@ -2,16 +2,13 @@
   "name": "myapp",
   "version": "0.0.0",
   "scripts": {
-
     "prod-jshint": "jshint ./",
-    "prod-build": "browserify -t browserify-css -t brfs app/app.js -o public/bundle.js",
-
+    "prod-build": "browserify -t browserify-css -t brfs -d -p [minifyify --no-map] app/app.js -o public/bundle.js",
+    "prod": "npm run prod-build & npm run prod-jshint",
     "test": "karma start test/unit/karma.conf.js",
     "test-single-run": "karma start test/unit/karma-coverage.conf.js --single-run",
-
     "preprotractor": "webdriver-manager update",
     "protractor": "protractor test/e2e/protractor.conf.js",
-
     "serve-watch": "watchify -t browserify-css -t brfs app/app.js -o public/bundle.js",
     "serve-launch": "cd public && w3",
     "serve": "npm run serve-watch & npm run serve-launch"
@@ -19,13 +16,14 @@
   "dependencies": {
     "angular": "^1.4.0",
     "angular-route": "^1.4.0",
-    "angular-css": "1.0.7",
-    "watchify": "^3.2.2"
+    "angular-css": "1.0.7"
   },
   "devDependencies": {
+    "watchify": "^3.2.2",
     "brfs": "latest",
-    "jshint": "~2.8.0",
     "browserify-css": "latest",
+    "minifyify": "^7.0.1",
+    "jshint": "~2.8.0",
     "jasmine-core": "^2.3.4",
     "karma": "^0.12.36",
     "karma-jasmine": "^0.3.5",
