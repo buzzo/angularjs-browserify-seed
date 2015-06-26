@@ -1,3 +1,5 @@
+'use strict';
+
 // workaround to make instanbul (from karma-coverage) work with browserify
 var cover = require('browserify-istanbul');
 
@@ -34,7 +36,7 @@ module.exports = function (config) {
         },
 
         coverageReporter: {
-            type: "text"
+            type: 'text'
         },
 
         reporters: ['progress', 'coverage'],

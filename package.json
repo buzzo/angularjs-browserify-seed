@@ -2,11 +2,16 @@
   "name": "myapp",
   "version": "0.0.0",
   "scripts": {
-    "build": "browserify -t browserify-css -t brfs app/app.js -o public/bundle.js",
+
+    "prod-jshint": "jshint ./",
+    "prod-build": "browserify -t browserify-css -t brfs app/app.js -o public/bundle.js",
+
     "test": "karma start test/unit/karma.conf.js",
     "test-single-run": "karma start test/unit/karma-coverage.conf.js --single-run",
+
     "preprotractor": "webdriver-manager update",
     "protractor": "protractor test/e2e/protractor.conf.js",
+
     "serve-watch": "watchify -t browserify-css -t brfs app/app.js -o public/bundle.js",
     "serve-launch": "cd public && w3",
     "serve": "npm run serve-watch & npm run serve-launch"
@@ -19,6 +24,7 @@
   },
   "devDependencies": {
     "brfs": "latest",
+    "jshint": "~2.8.0",
     "browserify-css": "latest",
     "jasmine-core": "^2.3.4",
     "karma": "^0.12.36",
