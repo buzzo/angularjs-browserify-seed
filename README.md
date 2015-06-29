@@ -9,9 +9,8 @@ Goals:
 - project should be easy to code = watchify + browserify
  
 TODO:
-- add fancy css
-- add CRUD example
 - research + add security (login, etc)
+- add CRUD example
 - move from css to sass
  
 ### Commands
