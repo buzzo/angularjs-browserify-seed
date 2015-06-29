@@ -3,13 +3,13 @@
   "version": "0.0.0",
   "scripts": {
     "prod-jshint": "jshint ./",
-    "prod-build": "browserify -t browserify-css -t brfs -d -p [minifyify --no-map] app/app.js -o public/bundle.js",
+    "prod-build": "browserify -t browserify-css -t brfs -d -p [minifyify --no-map] app/app.js -o public/js/main.js",
     "prod": "npm run prod-build & npm run prod-jshint",
     "test": "karma start test/unit/karma.conf.js",
     "test-single-run": "karma start test/unit/karma-coverage.conf.js --single-run",
     "preprotractor": "webdriver-manager update",
     "protractor": "protractor test/e2e/protractor.conf.js",
-    "serve-watch": "watchify -t browserify-css -t brfs app/app.js -o public/bundle.js",
+    "serve-watch": "watchify -t browserify-css -t brfs app/app.js -o public/js/main.js",
     "serve-launch": "cd public && w3",
     "serve": "npm run serve-watch & npm run serve-launch"
   },
