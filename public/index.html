@@ -1,17 +1,21 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]> <html lang="en" ng-app="app" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]> <html lang="en" ng-app="app" class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]> <html lang="en" ng-app="app" class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--><html lang="en" ng-app="app" class="no-js"> <!--<![endif]-->
+<!--[if IE 9 ]><html class="ie ie9" lang="en" class="no-js" ng-app="app"> <![endif]-->
+<!--[if !(IE)]><!-->
+<html lang="en" class="no-js" ng-app="app">
+<!--<![endif]-->
 
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/main.css">
+
         <title>My AngularJS App</title>
+        <meta charset="utf-8">
+        <meta name="description" content="My AngularJS App">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <!-- CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="css/main.css" rel="stylesheet" type="text/css">
+
     </head>
 
     <body>
@@ -28,7 +32,7 @@
         </nav>
 
         <div class="container">
-            <div class="starter-template">
+            <div class="main-template">
                 <ng-view></ng-view>
             </div>
         </div>
@@ -36,4 +40,5 @@
         <script src="js/main.js"></script>
 
     </body>
+
 </html>
