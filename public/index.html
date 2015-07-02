@@ -20,27 +20,26 @@
 
     <body>
 
-        <div class="container">
-
-            <nav class="navbar navbar-default navbar-fixed-top">
-                <div class="container-fluid">
-                    <div class="navbar-header">
-                        <a class="navbar-brand" href="#/">MY APP</a>
-                    </div>
-
-                    <div id="navbar" class="navbar-collapse collapse">
-                        <ul class="nav navbar-nav navbar-right">
-                            <li><button type="button" class="btn navbar-btn"><span class="glyphicon glyphicon-question-sign"></span> Help</button></li>
-                            <li><button type="button" class="btn navbar-btn"><span class="glyphicon glyphicon-log-out"></span> Log Out</button></li>
-                        </ul>
-                    </div>
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#/">MY APP</a>
                 </div>
-            </nav>
 
-            <div class="main-template">
-                <ng-view></ng-view>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <button type="button" class="btn navbar-btn "><span class="glyphicon glyphicon-log-out"></span>
+                                Log Out
+                            </button>
+                        </li>
+                    </ul>
+                </div>
             </div>
+        </nav>
 
+        <div class="main-template">
+            <ng-view></ng-view>
         </div>
 
         <script src="js/main.js"></script>
