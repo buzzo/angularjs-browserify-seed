@@ -1,3 +1,8 @@
+/*https://angular-ui.github.io/bootstrap/#/getting_started*/
+.nav, .pagination, .carousel, .panel-title a {
+    cursor: pointer;
+}
+
 .main-template {
     padding: 40px 10px;
 }
