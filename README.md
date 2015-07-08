@@ -1,4 +1,4 @@
-# crud-js-boilerplate
+# angularjs-browserify-seed
 My first experiment with Nodejs.
 
 Goals:
