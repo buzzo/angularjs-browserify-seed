@@ -1,25 +1,63 @@
 # angularjs-browserify-seed
-My first experiment with Nodejs.
 
-Goals:
-- no grunt, gulp or builder = pure npm
+A seed project using AngularJS and Browserify.
+
+### Goals
+
+- builder = gulp
 - no requirejs or AMD = browserify
-- after some research I choose the most used structural framework = angularjs
+- structural framework = angularjs
 - modular and scalable project = features app folder. Each feature has it's own html/css/js
 - project should be easy to code = watchify + browserify
- 
-TODO:
-- research + add security (login, etc)
-- add CRUD example
-- move from css to sass
- 
+
 ### Commands
 
 ```
 npm install
-npm run serve (development - open browser http://localhost:3000 and change the code)
-npm run prod (build for production, output goes to 'public' folder)
-npm run test-single-run (run unit test once and show coverage report)
-npm run test (run unit test and keeps watching for changes. Great for development. No coverage report)
-npm run protractor (e2e tests. Your server must be up and running before you run this command)
 ```
+Install dependencies.
+
+
+```
+npm install -g gulp
+```
+Install gulp globally.
+
+
+```
+gulp dev
+```
+Compiles the source and outputs to 'build' folder. It opens the new browser and refreshs it on every code change.
+It doesn't execute the tests.
+It mocks the backend using angular-mocks (test/mock/main_mock.js)
+
+
+```
+gulp prod
+```
+Compiles the source and outputs to 'build' folder. Uglify is applied.
+It doesn't execute the tests.
+
+```
+gulp test
+```
+Executes unit tests and e2e tests.
+Creates coverage report.
+
+
+```
+npm run test 
+```
+Executes only unit test and holds the console while running constantly all tests when the code is changed.
+Great for TDD development.
+No coverage report.
+
+
+```
+npm run protractor
+```
+Before using this command run "npm install -g protractor" to install protractor
+You must have your production code running somewhere else.
+Executes only e2e tests.
+No coverage report.
+
